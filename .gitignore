@@ -2,6 +2,9 @@
 .idea
 .ipynb_checkpoints
 .openai_cache.db
+.nextflow
+.notes
+.nextflow.*
 .poetry
 .venv
 .zshenv
@@ -12,5 +15,6 @@
 *.parquet
 *.pickle
 __pycache__
-arangodb/
+data/
 poetry
+work/
