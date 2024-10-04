@@ -70,7 +70,7 @@ See: [[file:Chapter-01-CELLxGENE.ipynb][Chapter-01-CELLxGENE.ipynb]]
   from CELLxGENE import get_lung_obs_and_datasets, get_title
   try:
       lung_obs, lung_datasets = get_lung_obs_and_datasets()
-      citation = lung_datasets["citation"].iloc[0]
+      citation = lung_datasets["citation"].iloc[4]
       title = get_title(citation)
   except Exception:
       print_exc()

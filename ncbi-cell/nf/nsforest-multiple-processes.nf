@@ -112,7 +112,7 @@ process run_nsforest {
     script:
     baseName = h5adPath.getBaseName()
     """
-    nsforest.py --run-nsforest ${h5adPath} --cluster-header ${clusterHeader}
+    nsforest.py --run-nsforest-without-preprocessing ${h5adPath} --cluster-header ${clusterHeader}
     mv ${csvFilename} ${baseName}_${csvFilename}
     """
 

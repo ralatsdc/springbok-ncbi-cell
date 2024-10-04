@@ -283,7 +283,7 @@ exception handling since accessing an external resource):
 
 #+begin_src python :results output :session shared
   try:
-      citation = lung_datasets["citation"].iloc[0]
+      citation = lung_datasets["citation"].iloc[4]
       title = get_title(citation)
   except Exception:
       print_exc()
@@ -365,7 +365,7 @@ handling when accessing an external resource from now on):
 
 #+begin_src python :results output :session shared
   try:
-      dataset_series = lung_datasets.iloc[0]
+      dataset_series = lung_datasets.iloc[4]
       get_and_download_dataset_h5ad_file(dataset_series)
   except Exception:
       print_exc()

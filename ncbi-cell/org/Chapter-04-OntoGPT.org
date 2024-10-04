@@ -75,7 +75,7 @@ PMID for a title:
   from E_Utilities import get_pmid_for_title
   try:
       lung_obs, lung_datasets = get_lung_obs_and_datasets()
-      citation = lung_datasets["citation"].iloc[0]
+      citation = lung_datasets["citation"].iloc[4]
       title = get_title(citation)
       pmid = get_pmid_for_title(title)
   except Exception:

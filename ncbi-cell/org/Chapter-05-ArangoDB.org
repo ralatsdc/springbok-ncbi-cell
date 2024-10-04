@@ -37,7 +37,7 @@ as follows:
     -e ARANGO_NOAUTH=1 \
     -p 8529:8529 \
     -d \
-    -v \$ARANGODB<sub>HOME</sub>:/var/lib/arangodb3 \
+    -v $ARANGODB_HOME:/var/lib/arangodb3 \
     arangodb
 #+end_src
 

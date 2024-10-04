@@ -22,7 +22,7 @@ if (params.help) {
 h5adPath = channel.fromPath(params.h5adPath)
 csvFilename = channel.value("cell_type_results.csv")
 
-process run_nsforest_on_file {
+process run_nsforest {
 
     publishDir "results", mode: "copy"
 
@@ -36,11 +36,11 @@ process run_nsforest_on_file {
     script:
     baseName = h5adPath.getBaseName()
     """
-    nsforest.py --run-nsforest-on-file ${h5adPath}
+    nsforest.py --run-nsforest-with-preprocessing ${h5adPath}
     mv ${csvFilename} ${baseName}_${csvFilename}
     """
 }
 
 workflow {
-    run_nsforest_on_file(h5adPath, csvFilename)
+    run_nsforest(h5adPath, csvFilename)
 }
